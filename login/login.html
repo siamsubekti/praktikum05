@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="login.css" type="text/css" media="all">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body class="text-center">
+        <form action="/login/login-success/login-success.html" class="form-signin" id="login-form">
+            <img src="" alt="" width="72" height="72">
+            <h1>Please Sign In</h1>
+            <p id="login-error-msg" class="text-danger"></p>
+            <label for="inputUsername" class="sr-only">
+                Username
+            </label>
+            <input type="text" name="username" id="inputUsername" class="form-control my-2" placeholder="Username" required autofocus>
+            <label for="inputPassword" class="sr-only">
+                Password
+            </label>
+            <input type="password" name="password" id="inputPassword" class="form-control my-2" placeholder="Password" required autofocus>
+            <button type="submit" class="btn btn-lg btn-primary btn-block mb-2" id="login-form-submit">
+                Sign In
+            </button>
+            <a href="../index.html">Back To Home</a>
+        </form>
+
+
+
+        <script src="otentication.js"></script>
+    </body>
+</html>

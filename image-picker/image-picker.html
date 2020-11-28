@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="/" type="text/css" media="all">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="col-4 my-1 pt-3">
+            <a href="../index.html">Back To Home</a>
+            <select id="dlist" onChange="swapImage()" class="custom-select mt-2">
+                <option value="../assets/img/anggur.jpeg">anggur</option>
+                <option value="../assets/img/apel.jpg">apel</option>
+                <option value="../assets/img/pisang.jpg">pisang</option>
+                <option value="../assets/img/sirsak.jpeg">sirsak</option>
+                <option value="../assets/img/orange.jpg">orange</option>
+                <option value="../assets/img/jambu.jpg">jambu</option>
+            </select>
+        </div>
+        <img id="imageToSwap" src="../assets/img/anggur.jpeg" height="400" width="auto" />
+        <dialog id="dialog" aria-hidden="true"></dialog>
+        <script src="image-picker.js">
+            
+        </script>
+        <script>
+            function swapImage() {
+                var image = document.getElementById("imageToSwap");
+                var dropd = document.getElementById("dlist");
+                image.src = dropd.value;
+                dropd.value.split('../assets/img/');
+                dropd.value.replace(',', '');
+                var text = dropd.value.split('../assets/img/');
+                var dg = document.getElementById("dialog");
+                dg.innerText = `ini gambar ${text[1].replace('.jpg', '').replace('.jpeg', '')}`;
+            };
+        </script>
+    </body>
+</html>
